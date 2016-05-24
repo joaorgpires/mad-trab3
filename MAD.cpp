@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
+
 using namespace std;
+
 #define COOP 0
 #define CHEAT 1
 

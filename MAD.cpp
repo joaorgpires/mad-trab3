@@ -17,6 +17,7 @@ int tit4tat(int last);
 int choice, turn=0, points=0, enemy=0, combo1=0, combo2=0, combo3=0, combo4=0;
 
 int main(){
+  srand(time(NULL));
   cout << "Choose the strategy you want to test:" << endl;
   cout << "1- Cooperar sempre" << endl;
   cout << "2- Trair sempre" << endl;
@@ -42,7 +43,7 @@ void start(){
   while(!over){
     over=endGame();
     turn++;
-    cout << "Turn: " << turn << endl;
+    //cout << "Turn: " << turn << endl;
     if(choice == 1){
       player1=strat();
       player2=cooperar();
@@ -126,7 +127,7 @@ int trair(){
 
 bool endGame() {
   int k = rand() % 100000;
-  cout << "Random value: " << k << endl;
+  //cout << "Random value: " << k << endl;
   if(k < 346)
     return true;
   return false;
